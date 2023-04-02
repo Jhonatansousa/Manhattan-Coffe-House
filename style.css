@@ -38,13 +38,36 @@ nav ul {
   gap: 2rem;
 
   list-style: none;
+  position: relative;
 }
 
-nav ul li a {
+.nav-link {
   text-decoration: none;
   color: var(--main-color);
   font-family: 'lato';
   font-weight: bold;
+
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  width: 0;
+  height: .3rem;
+  border-radius: 5px;
+  background-color: rgb(252, 156, 12);
+  transition: .4s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: rgb(252, 156, 12);
+  transition: .4s;
 }
 
 .logo img {
@@ -272,7 +295,10 @@ footer a {
   right: 5rem;
 }
 
-
+.arrow-up:hover {
+  transform: scale(0.85);
+  transition: .2s;
+}
 
 
 
